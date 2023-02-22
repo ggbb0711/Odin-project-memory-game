@@ -1,0 +1,43 @@
+body{
+    min-height: 100vh;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 1000px;
+}
+
+.point{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.board{
+    color: red;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(25%,1fr));
+    justify-items: center;
+    gap: 10px;
+}
+
+.board>div:not(.win-screen){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 2px 8px grey;
+}
+
+.win-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
